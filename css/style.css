@@ -494,6 +494,7 @@ section, footer {
 
 /*********************/
 /***** parcours *****/
+/*
 .parcours h2 {
     text-align: center;
 }
@@ -512,6 +513,7 @@ section, footer {
     padding: 5px 20px;
     color: #7B9EC4;
 }
+*/
 /************************/
 /***** communauté ******/
 .communaute_wrapper {
@@ -578,10 +580,65 @@ section, footer {
 .outil_content_1 {
     background-color: #E9F4FF;
 }
-
 .outil_content_2 {
     background: linear-gradient(88deg, #0A68CF 3.16%, #469EFF 97.03%);
     color: #fff;
+}
+.outil_content_1 .offre, .outil_content_2 .offre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    font-size: 25px;
+    font-weight: 600;
+}
+.outil_content_1 .offre {
+    color: #000;
+}
+.outil_content_2 .offre {
+    color: #fff;
+}
+.outil_content_2 .offre_ecos {
+    display: flex;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 150px;
+    background: #FFF;
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+.outil_content_1 .tarif, .outil_content_2 .tarif {
+    font-weight: 500;
+}
+.outil_content_2 .tarif {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.outil_content_2 .tarif p:first-of-type {
+    line-height: 85%;
+}
+.outil_content_2 .tarif p:last-of-type {
+    font-size: 12px;
+}
+.outil_content_2 .premium {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+[class^="outil_content"] {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+[class^="outil_content"] ul {
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 .outil_title.anim-y {
     animation-delay: 0.3s;
