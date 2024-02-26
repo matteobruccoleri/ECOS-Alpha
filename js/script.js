@@ -23,7 +23,7 @@ window.addEventListener('scroll', () => {
     const fonctionnementBtn = document.querySelector('.fonctionnement_btn');
     const fonctionnementWrapper1Top = fonctionnementWrapper1.getBoundingClientRect().top;
     
-    if(scrollTop > (scrollTop + fonctionnementWrapper1Top) - clientHeight * 0.7) {
+    if(scrollTop > (scrollTop + fonctionnementWrapper1Top) - clientHeight * 0.8) {
 
         iphoneA.classList.add('anim-iphone-3-top');
         iphoneB.classList.add('anim-iphone-3-down');
@@ -49,7 +49,7 @@ window.addEventListener('scroll', () => {
     const checkwrapper2Text = document.querySelector('.check_wrapper_2_text');
     const fonctionnementWrapper2Top = fonctionnementWrapper2.getBoundingClientRect().top;
 
-    if(scrollTop > (scrollTop + fonctionnementWrapper2Top) - clientHeight * 0.7) {
+    if(scrollTop > (scrollTop + fonctionnementWrapper2Top) - clientHeight * 0.8) {
         // fonctionnement_wrapper_2
         fonctionnementWrapper2.classList.add('anim-y-both');
         fonctionnementTitle2.classList.add('anim-y');
@@ -75,7 +75,7 @@ window.addEventListener('scroll', () => {
     const iphone3d = document.querySelector('.iphone-3-d');
     const communauteWrapperTop = communauteWrapper.getBoundingClientRect().top;
 
-    if(scrollTop > (scrollTop + communauteWrapperTop) - clientHeight * 0.7) {
+    if(scrollTop > (scrollTop + communauteWrapperTop) - clientHeight * 0.8) {
         communauteWrapper.classList.add('anim-y-both');
         iphone3c.classList.add('anim-iphone-3-top');
         iphone3d.classList.add('anim-iphone-3-down');
@@ -92,7 +92,7 @@ window.addEventListener('scroll', () => {
     const outilBtn = document.querySelector('.outil_btn');
     const outilTop = outil.getBoundingClientRect().top;
 
-    if(scrollTop > (scrollTop + outilTop) - clientHeight * 0.7) {
+    if(scrollTop > (scrollTop + outilTop) - clientHeight * 0.8) {
 
         outil.classList.add('anim-y-both');
         outilTitle.classList.add('anim-y');
