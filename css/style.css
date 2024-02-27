@@ -942,6 +942,11 @@ footer nav .link{
     h2 {
         font-size: 25px;
     }
+    h2 span, h3 span {
+        display: inline;
+        padding-left: 3px;
+        text-align: center;
+    }
     h3 {
         font-size: 22px;
     }
@@ -1004,6 +1009,7 @@ footer nav .link{
         width: 100%;
         height: auto;
     }
+
     .fonctionnement_wrapper_3 .fonctionnement_content:first-of-type {
         width: 100%;
     }
@@ -1051,13 +1057,17 @@ footer nav .link{
     .fonctionnement_iphone_2 {
         display: none;
     }
+    .fonctionnement_wrapper_1, .fonctionnement_wrapper_2 {
+        gap: 50px;
+    }
     .fonctionnement_wrapper_2 .fonctionnement_content {
         height: 300px;
         mask-image: linear-gradient(180deg, rgb(0 0 0 / 100%) 60%, rgba(0 0 0 / 0%) 100%);
     }
     .fonctionnement_wrapper_2 .fonctionnement_content .fonctionnement_iphone_1 {
-        left: 50%;
+        left: 55%;
         transform: translate(-50%, 0%);
+        width: 70%;
     }
      /*  .fonctionnement_wrapper_3 */
     .fonctionnement_wrapper_3 .fonctionnement_content {
@@ -1092,6 +1102,7 @@ footer nav .link{
     .communaute_wrapper {
         flex-direction: column;
         padding: 20px;
+        gap: 50px;
     }
     .communaute_content_1 {
         width: 100%;
@@ -1158,6 +1169,10 @@ footer nav .link{
 }
 
 @media screen and (max-width: 425px) {
+    .btn {
+        font-size: 12px;
+        padding: 14px;
+    }
     h1 {
         font-size: 26px;
     }
@@ -1176,5 +1191,14 @@ footer nav .link{
     [class^="check_wrapper"] p:last-of-type {
         font-weight: 400;
         font-size: 12px;
+    }
+
+    /***** Entrainement *****/
+    .entrainement_content_2, .entrainement_content_2 .ellipse-blue {
+        height: 288px;
+        width: 288px;
+    }
+    .entrainement_content_2 .iphone-1, .entrainement_content_2 .iphone-2{
+        height: 248px;
     }
 }
