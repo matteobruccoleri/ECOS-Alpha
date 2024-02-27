@@ -434,11 +434,11 @@ header .ecos-alpha {
 }
 [class^="check_wrapper"] p {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
 }
 [class^="check_wrapper"] p:last-of-type {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
 }
 /* check_wrapper_1 */
 .check_wrapper_1 {
@@ -479,6 +479,9 @@ header .ecos-alpha {
 }
 .check_wrapper_2_text.anim-y-both {
     animation-delay: 2.2s;
+}
+.check_wrapper_1, .check_wrapper_2 {
+    text-align: center;
 }
 /**/
 .iphone-3-a,  .iphone-3-c {
@@ -951,6 +954,12 @@ footer nav .link{
     .btn {
         font-size: 14px;
         padding: 16px;
+    }
+    .fonctionnement_btn {
+        width: 100%;
+    }
+
+    .entrainement_btn .btn, .communaute_btn, .outil_btn {
         width: 100%;
     }
     /***** entrainement *****/
@@ -984,14 +993,16 @@ footer nav .link{
         border-radius: 10px;
         background: #E5EEF7;
     }
-    .entrainement_btn .btn {
-        width: 100%;
-    }
+
     /***** fonctionnement *****/
+    .fonctionnement {
+        gap: 75px;
+    }
     [class^="fonctionnement_wrapper"] {
         padding: 25px;
         flex-direction: column;
         width: 100%;
+        height: auto;
     }
     .fonctionnement_wrapper_3 .fonctionnement_content:first-of-type {
         width: 100%;
@@ -1012,14 +1023,23 @@ footer nav .link{
     .fonctionnement_content_1, .fonctionnement_content_2 {
         width: 100%;
     }
-    .fonctionnement_content_2 {
-        order: -1;
+    .fonctionnement_content_1 {
+        padding: 0;
     }
+    .fonctionnement_content_2 {
+        height: 300px;
+        order: -1;
+        mask-image: linear-gradient(180deg, rgb(0 0 0 / 100%) 60%, rgba(0 0 0 / 0%) 100%);
+    }
+    .fonctionnement_dual_wrapper {
+        height: auto;
+    }
+    /*  .fonctionnement_wrapper_2 */
     .fonctionnement_wrapper_2 .fonctionnement_content {
         order: -1;
     }
     .fonctionnement_content_2 .iphone-3-a {
-        left: 50%;
+        left: 55%;
         transform: translate(-50%, 50%);
     }
     .fonctionnement_content_2 .iphone-3-b {
@@ -1027,13 +1047,24 @@ footer nav .link{
     }
     .fonctionnement_dual_wrapper {
         flex-direction: column;
-
     }
+    .fonctionnement_iphone_2 {
+        display: none;
+    }
+    .fonctionnement_wrapper_2 .fonctionnement_content {
+        height: 300px;
+        mask-image: linear-gradient(180deg, rgb(0 0 0 / 100%) 60%, rgba(0 0 0 / 0%) 100%);
+    }
+    .fonctionnement_wrapper_2 .fonctionnement_content .fonctionnement_iphone_1 {
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+     /*  .fonctionnement_wrapper_3 */
     .fonctionnement_wrapper_3 .fonctionnement_content {
-        gap: 25px;
+        gap: 50px;
     }
     .fonctionnement_wrapper_3 .fonctionnement_content:first-of-type {
-        padding: 0 0 85px;
+        padding: 0 0 65px;
     }
     .progress_bar {
         width: 85%;
@@ -1064,10 +1095,22 @@ footer nav .link{
     }
     .communaute_content_1 {
         width: 100%;
+        padding: 0;
+    }
+    .communaute_content_2 {
+        height: 300px;
+        width: 100%;
+        order: -1;
+        mask-image: linear-gradient(180deg, rgb(0 0 0 / 100%) 60%, rgba(0 0 0 / 0%) 100%);
+    }
+    .communaute_content_2 .iphone-3-c {
+        left: 55%;
+        transform: translate(-50%, 0%);
     }
     .communaute_content_2 .iphone-3-d {
         display: none;
     }
+   
     /***** outil *****/
     .outil {
         gap: 25px;
@@ -1091,9 +1134,6 @@ footer nav .link{
     [class^="outil_content"] ul li {
 
         line-height: 150%;
-    }
-    .outil_btn {
-        width: 100%;
     }
     /***** footer *****/
     footer {
@@ -1127,5 +1167,14 @@ footer nav .link{
     }
     .entrainement_text p {
         text-align: center;
+    }
+
+    [class^="check_wrapper"] p {
+        font-weight: 700;
+        font-size: 16px;
+    }
+    [class^="check_wrapper"] p:last-of-type {
+        font-weight: 400;
+        font-size: 12px;
     }
 }
