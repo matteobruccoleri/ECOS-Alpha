@@ -394,14 +394,13 @@ header .ecos-alpha {
 .fonctionnement_iphone_3 {
     position: absolute;
     transform: translateY(100%);
-    width: 100%;
+    width: 80%;
+    right: 0;
 }
-.fonctionnement_iphone_3.anim-y {
+.fonctionnement_iphone_3.anim-y-both {
     animation-delay: 1s;
 }
-.fonctionnement_btn {
-    width: 100%;
-}
+
 /* progress-bar_wrapper */
 .progress_bar_wrapper {
     position: relative;
