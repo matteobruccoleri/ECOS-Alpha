@@ -66,6 +66,42 @@ window.addEventListener('scroll', () => {
         checkwrapper2Text.classList.add('anim-y-both');
     };
 
+    // outil
+    const outil = document.querySelector('.outil');
+    const outilTitle = document.querySelector('.outil_title');
+    const outilContent1 = document.querySelector('.outil_content_1');
+    const outilContent2 = document.querySelector('.outil_content_2');
+    const outilBtn = document.querySelector('.outil_btn');
+    const outilTop = outil.getBoundingClientRect().top;
+
+    if(scrollTop > (scrollTop + outilTop) - clientHeight * 0.8) {
+
+        outil.classList.add('anim-y-both');
+        outilTitle.classList.add('anim-y');
+        outilContent1.classList.add('anim-y');
+        outilContent2.classList.add('anim-y');
+        outilBtn.classList.add('anim-y');
+    }
+
+    // correction_notation
+    const correction = document.querySelector('.correction_wrapper');
+    const notation = document.querySelector('.notation_wrapper');
+    const correctionTitle = document.querySelector('.correction_wrapper h3');
+    const notationTitle = document.querySelector('.notation_wrapper h3');
+    const correctionNaration = [correction, notation];
+    const correctionContainer = document.querySelector(".correction_container");
+    const notationContainer = document.querySelector(".notation_container");
+
+    correctionNaration.map(element => {
+        const correctionNarationTop = element.getBoundingClientRect().top
+        if (scrollTop > (scrollTop + correctionNarationTop) - clientHeight * 0.8) {
+            correctionContainer.classList.add('anim-y-both');
+            notationContainer.classList.add('anim-y-both');
+            correctionTitle.classList.add('anim-y-both');
+            notationTitle.classList.add('anim-y-both');
+        }
+    });
+
     // communaute
     const communauteWrapper = document.querySelector('.communaute_wrapper');
     const communauteTitle = document.querySelector('.communaute_title');
@@ -84,30 +120,37 @@ window.addEventListener('scroll', () => {
         communauteText.classList.add('anim-y');
     };
 
-    // outil
-    const outil = document.querySelector('.outil');
-    const outilTitle = document.querySelector('.outil_title');
-    const outilContent1 = document.querySelector('.outil_content_1');
-    const outilContent2 = document.querySelector('.outil_content_2');
-    const outilBtn = document.querySelector('.outil_btn');
-    const outilTop = outil.getBoundingClientRect().top;
-
-    if(scrollTop > (scrollTop + outilTop) - clientHeight * 0.8) {
-
-        outil.classList.add('anim-y-both');
-        outilTitle.classList.add('anim-y');
-        outilContent1.classList.add('anim-y');
-        outilContent2.classList.add('anim-y');
-        outilBtn.classList.add('anim-y');
-    }
-
     
 });
 
+const allBtnDownload = document.querySelectorAll(".btn_blue");
+const modalDownloadAppli = document.querySelector(".modal_download_wrapper");
+const modal = document.querySelector(".modal_download");
 
+allBtnDownload.forEach(btnDownload => {
+    btnDownload.addEventListener('click', () => {
+        modalDownloadAppli.style.visibility = "visible";
+        modalDownloadAppli.classList.add('display');
+            modal.classList.add('anim_download');
+        
+    });
+});
 
+const close_modal = document.querySelector(".modal_close");
+close_modal.addEventListener('click', () => {
+    modal.classList.remove('anim_download');
+        modalDownloadAppli.style.visibility = "hidden";
+        modalDownloadAppli.classList.remove('display');    
+});
 
-
-
-
-
+// Écouter les événements mousedown sur le document entier
+document.addEventListener("mousedown", (event) => {
+    // Vérifier si le clic a été effectué en dehors du marqueur
+    if (!event.target.closest(".modal_download") && event.target.closest(".modal_download_wrapper")) {
+        modal.classList.remove('anim_download');
+        modalDownloadAppli.classList.remove('display');
+        setTimeout(() => {
+            modalDownloadAppli.style.visibility = "hidden";
+        }, 100);
+    }
+  });
