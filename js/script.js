@@ -607,14 +607,3 @@ function toggleDivVisibility() {
 }
 window.addEventListener("resize", toggleDivVisibility);
 toggleDivVisibility();
-
-//bug ios
-var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-if (isIOS) {
-  navigator.__defineGetter__("userAgent", function () {
-    return "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:99.0) Gecko/20100101 Firefox/99.0";
-  });
-  navigator.__defineGetter__("appName", function () {
-    return "Netscape";
-  });
-}
