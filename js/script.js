@@ -196,7 +196,7 @@ const imagesParRole = {
 let roleActif = "medecin";
 
 //Progress bar
-/* function adjustProgressBar() {
+function adjustProgressBar() {
   const activePhases = Array.from(
     document.querySelectorAll(".parcours_phase")
   ).filter((phase) => phase.style.display !== "none");
@@ -212,7 +212,7 @@ let roleActif = "medecin";
 
     progressBar.style.height = `${height}px`;
   }
-} */
+}
 
 document.addEventListener("scroll", function () {
   const phases = document.querySelectorAll(".parcours_phase");
@@ -264,7 +264,7 @@ document.addEventListener("scroll", function () {
 });
 
 //changer la taille de la progress bar dynamiquement
-/* const observer = new MutationObserver(function (mutations) {
+const observer = new MutationObserver(function (mutations) {
   mutations.forEach(function (mutation) {
     if (mutation.type === "attributes" && mutation.attributeName === "class") {
       const targetElement = mutation.target;
@@ -280,7 +280,7 @@ phases.forEach(function (phase) {
     attributes: true,
     attributeFilter: ["class"],
   });
-}); */
+});
 
 //Popup
 document.addEventListener("DOMContentLoaded", function () {
@@ -415,7 +415,7 @@ document.getElementById("btn_phase_3").addEventListener("click", function () {
 });
 
 //Onglets
-function changeTab() {
+/* function changeTab() {
   const links = document.querySelectorAll(".parcours_nav a");
   const navBackground = document.querySelector(".nav-background");
   const phase_1 = document.getElementById("phase_1");
@@ -594,10 +594,10 @@ function adjustBehaviorBasedOnScreenSize() {
 document.addEventListener("DOMContentLoaded", function () {
   adjustBehaviorBasedOnScreenSize();
 });
-window.addEventListener("resize", adjustBehaviorBasedOnScreenSize);
+window.addEventListener("resize", adjustBehaviorBasedOnScreenSize); */
 
 //phase 3 inactive en desktop
-/* function toggleDivVisibility() {
+function toggleDivVisibility() {
   const div = document.getElementById("phase_3_container_mobile");
   if (window.innerWidth < 1024) {
     div.style.display = "flex";
@@ -606,4 +606,4 @@ window.addEventListener("resize", adjustBehaviorBasedOnScreenSize);
   }
 }
 window.addEventListener("resize", toggleDivVisibility);
-toggleDivVisibility(); */
+toggleDivVisibility();
