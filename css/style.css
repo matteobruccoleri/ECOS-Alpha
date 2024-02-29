@@ -2073,8 +2073,18 @@ footer nav .link{
 }
 
 @media screen and (max-width: 375px) {
+    h1, h2 {
+        font-size: 20px;
+    }
     h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    .correction_container h4, .notation_container h4 {
         font-size: 18px;
+        font-weight: 600;
     }
     .correction_content p, p, li {
         font-size: 14px;
