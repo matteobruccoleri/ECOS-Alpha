@@ -214,7 +214,7 @@ function adjustProgressBar() {
   }
 }
 
-/* document.addEventListener("scroll", function () {
+document.addEventListener("scroll", function () {
   const phases = document.querySelectorAll(".parcours_phase");
   const progressFill = document.querySelector(".progress_fill");
   const progressBar = document.querySelector(".parcours_progress_bar");
@@ -280,7 +280,7 @@ phases.forEach(function (phase) {
     attributes: true,
     attributeFilter: ["class"],
   });
-}); */
+});
 
 //Popup
 document.addEventListener("DOMContentLoaded", function () {
@@ -607,3 +607,14 @@ function toggleDivVisibility() {
 }
 window.addEventListener("resize", toggleDivVisibility);
 toggleDivVisibility();
+
+//bug ios
+var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+if (isIOS) {
+  navigator.__defineGetter__("userAgent", function () {
+    return "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:99.0) Gecko/20100101 Firefox/99.0";
+  });
+  navigator.__defineGetter__("appName", function () {
+    return "Netscape";
+  });
+}
