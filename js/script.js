@@ -140,46 +140,99 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Écouter les événements sur btnDownload
 const allBtnDownload = document.querySelectorAll(".btn_blue");
 const parcoursBtnDownload = document.querySelectorAll(".parcours_phase_btn");
-const modalDownloadAppli = document.querySelector(".modal_download_wrapper");
+const modalDownloadWrapper = document.querySelector(".modal_download_wrapper");
 const modal = document.querySelector(".modal_download");
 
 allBtnDownload.forEach((btnDownload) => {
   btnDownload.addEventListener("click", () => {
-    modalDownloadAppli.style.visibility = "visible";
-    modalDownloadAppli.classList.add("display");
+    modalDownloadWrapper.style.visibility = "visible";
+    modalDownloadWrapper.classList.add("display");
     modal.classList.add("anim_download");
   });
 });
 
 parcoursBtnDownload.forEach((btnDownload) => {
   btnDownload.addEventListener("click", () => {
-    modalDownloadAppli.style.visibility = "visible";
-    modalDownloadAppli.classList.add("display");
+    modalDownloadWrapper.style.visibility = "visible";
+    modalDownloadWrapper.classList.add("display");
     modal.classList.add("anim_download");
   });
 });
 
-const close_modal = document.querySelector(".modal_close");
-close_modal.addEventListener("click", () => {
+// Evenement sur le btn modal_close
+const closeModal = document.querySelector(".modal_close");
+
+closeModal.addEventListener("click", () => {
   modal.classList.remove("anim_download");
-  modalDownloadAppli.style.visibility = "hidden";
-  modalDownloadAppli.classList.remove("display");
+  modalDownloadWrapper.style.visibility = "hidden";
+  modalDownloadWrapper.classList.remove("display");
 });
 
-// Écouter les événements mousedown sur le document entier
+// Écouter les événements sur correction_btn
+const correctionBtn = document.querySelector(".correction_btn");
+const popupCorrectionWrapper = document.querySelector(".popup_correction_wrapper");
+const popupCorrection = document.querySelector(".popup_correction");
+
+correctionBtn.addEventListener('click', () => {
+  popupCorrectionWrapper.style.visibility = "visible";
+  popupCorrectionWrapper.classList.add("display");
+  popupCorrection.classList.add("anim_download");
+
+});
+
+// Écouter les événements sur notation_btn
+const notationBtn = document.querySelector(".notation_btn");
+const popupNotationWrapper = document.querySelector(".popup_notation_wrapper");
+const popupNotation = document.querySelector(".popup_notation");
+
+notationBtn.addEventListener('click', () => {
+  popupNotationWrapper.style.visibility = "visible";
+  popupNotationWrapper.classList.add("display");
+  popupNotation.classList.add("anim_download");
+
+});
+
+// Écouter les événements sur popup_correction_close
+const popupCorrectionClose = document.querySelector(".popup_correction_close");
+
+popupCorrectionClose.addEventListener("click", () => {
+  popupCorrection.classList.remove("anim_download");
+  popupCorrectionWrapper.style.visibility = "hidden";
+  popupCorrectionWrapper.classList.remove("display");
+});
+
+// Écouter les événements sur popup_notation_close
+const popupNotationClose = document.querySelector(".popup_notation_close");
+
+popupNotationClose.addEventListener("click", () => {
+  popupNotation.classList.remove("anim_download");
+  popupNotationWrapper.style.visibility = "hidden";
+  popupNotationWrapper.classList.remove("display");
+});
+
+// Écouter les événements mousedown
 document.addEventListener("mousedown", (event) => {
-  // Vérifier si le clic a été effectué en dehors du marqueur
+  // Si le clic n'a pas été effectué sur modal_download et effectué sur modal_download_wrapper
   if (
-    !event.target.closest(".modal_download") &&
-    event.target.closest(".modal_download_wrapper")
-  ) {
+    !event.target.closest(".modal_download") && event.target.closest(".modal_download_wrapper")) {
     modal.classList.remove("anim_download");
-    modalDownloadAppli.classList.remove("display");
-    setTimeout(() => {
-      modalDownloadAppli.style.visibility = "hidden";
-    }, 100);
+    modalDownloadWrapper.classList.remove("display");
+    modalDownloadWrapper.style.visibility = "hidden";
+  }
+  if (
+    !event.target.closest(".popup_correction") && event.target.closest(".popup_correction_wrapper")) {
+    popupCorrection.classList.remove("anim_download");
+    popupCorrectionWrapper.classList.remove("display");
+    popupCorrectionWrapper.style.visibility = "hidden";
+  }
+  if (
+    !event.target.closest(".popup_notation") && event.target.closest(".popup_notation_wrapper")) {
+    popupNotation.classList.remove("anim_download");
+    popupNotationWrapper.classList.remove("display");
+    popupNotationWrapper.style.visibility = "hidden";
   }
 });
 

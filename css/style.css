@@ -28,6 +28,10 @@ h1, h2 {
 h3 {
     font-size: 26px;
 }
+h5 {
+    font-size: 16px;
+    font-weight: 600;
+}
 p {
     line-height: 140%;
 }
@@ -45,6 +49,8 @@ p {
     justify-content: center;
     align-items: center;
     transition: 0.2s ease;
+}
+.btn, .correction_btn, .notation_btn {
     cursor: pointer;
 }
 /* btn_blue */
@@ -616,6 +622,7 @@ header .ecos-alpha {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    height: 100%;
 }
 .correction_content h4, .notation_content h4 {
     font-size: 20px;
@@ -650,11 +657,12 @@ header .ecos-alpha {
 
 }
 /* notation */
-.correction_content, .notation_content {
-    height: 100%;
-}
+
 .correction_content {
     mask-image: linear-gradient(180deg, rgb(0 0 0 / 100%) 60%, rgba(0 0 0 / 0%) 100%);
+}
+.correction_content ul {
+    color: #7B9EC4;
 }
 .correction_text {
     display: flex;
@@ -678,7 +686,7 @@ header .ecos-alpha {
     align-items: center;
     gap: 7px;
     width: 100%;
-
+    font-size: 14px;
 }
 .notation_text .checkbox_wrapper label {
     display: flex;
@@ -710,12 +718,6 @@ header .ecos-alpha {
     font-size: 20px;
     font-weight: 600;
 }
-.correction_container h5, .notation_container h5 {
-    font-size: 16px;
-    font-weight: 500;
-}
-
-
 
 /***** Outil *****/
 .outil {
@@ -830,7 +832,7 @@ header .ecos-alpha {
 }
 /*********************************/
 /***** modal_form_wrapper *******/
-.modal_download_wrapper {
+.modal_download_wrapper, .popup_correction_wrapper, .popup_notation_wrapper {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -843,14 +845,14 @@ header .ecos-alpha {
     transition: 0.3s ease;
     visibility: hidden;
 }
-.modal_download_wrapper.display {
+.modal_download_wrapper.display, .popup_correction_wrapper.display, .popup_notation_wrapper.display {
     opacity: 1;
     transition: 0.3s ease;
 }
 
-.modal_download {
+.modal_download, .popup_correction, .popup_notation  {
     display: flex;
-    padding: 50px 75px;
+    padding: 50px 10px;
     flex-direction: column;
     align-items: center;
     gap: 50px;
@@ -864,6 +866,34 @@ header .ecos-alpha {
     opacity: 0;
     transform: translate(-50%, -50%) scale(95%);
     transition: 0.3s ease;
+}
+.popup_correction, .popup_notation {
+    width: 50%;
+    width: 40%;
+    height: 70%;
+}
+.popup_correction_content,.popup_notation_content  {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    overflow-y: scroll;
+    padding: 0px 40px;
+    width: 100%;
+}
+.popup_correction_content .correction_text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.popup_correction_content h4, .popup_notation_content h4  {
+    font-size: 20px;
+    font-weight: 600; 
+ }
+.popup_correction_content p, .popup_correction_content ul {
+   color: #7B9EC4;  
 }
 .anim_download {
     animation: 0.3s cubic-bezier(0.14, .38, .19, .99) anim_download both;
@@ -892,7 +922,7 @@ header .ecos-alpha {
     object-fit: contain;
 }
 
-.modal_close {
+.modal_close, .popup_correction_close, .popup_notation_close  {
     position: absolute;
     top: 25px;
     right: 25px;
@@ -1498,6 +1528,10 @@ footer nav .link{
     .communaute_content_2 {
         transform: translateX(5%);
     }
+    .popup_correction, .popup_notation {
+        width: 65%;
+        height: 65%;
+    }
 }
 @media screen and (max-width: 1100px) {
     .parcours_progress {
@@ -1549,6 +1583,11 @@ footer nav .link{
     }
     .fonctionnement_wrapper_3 .fonctionnement_content:last-of-type {
         display: none;
+    }
+    /***** correction_notation *****/
+    .popup_correction, .popup_notation {
+        width: 60%;
+        height: 60%;
     }
     /***** communaute *****/
     .communaute_content_1 {
@@ -1641,6 +1680,9 @@ footer nav .link{
 
 
 @media screen and (max-width: 768px) {
+    ul {
+        font-size: 14px;
+    }
     .modal_download_wrapper {
         display: none;
     }
@@ -1858,7 +1900,14 @@ footer nav .link{
     .communaute_content_2 .iphone-3-d {
         display: none;
     }
-   
+    /***** correction_notation *****/
+    .popup_correction, .popup_notation {
+        width: 90%;
+        height: 70%;
+    }
+    .popup_correction_content, .popup_notation_content {
+        padding: 0px 20px;
+    }
     /***** outil *****/
     .outil {
         gap: 25px;
@@ -1945,7 +1994,7 @@ footer nav .link{
 
 @media screen and (max-width: 425px) {
     li {
-        font-size: 14px;
+        font-size: 16px;
     }
     .correction_content p, p {
         font-size: 16px;
@@ -2008,7 +2057,7 @@ footer nav .link{
     h3 {
         font-size: 18px;
     }
-    .correction_content p, p {
+    .correction_content p, p, li {
         font-size: 14px;
     }
     
