@@ -2,6 +2,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #F7FBFF;
     font-family: 'Inter', sans-serif;
@@ -253,6 +256,10 @@ header .ecos-alpha {
 }
 
 /***** Conception *****/
+#conception {
+    padding-top: 200px;
+    margin: 0 auto;
+}
 .conception_wrapper {
     display: flex;
     justify-content: space-between;
@@ -1507,6 +1514,10 @@ footer nav .link{
     section, footer {
         margin: 125px auto 0;
     }
+    #conception {
+        padding-top: 125px;
+        margin: 0 auto;
+    }
     .fonctionnement_content_1 {
         width: 60%;
     }
@@ -1608,6 +1619,10 @@ footer nav .link{
     }
     section, footer {
         margin: 75px auto 0;
+    }
+    #conception {
+        padding-top: 75px;
+        margin: 0 auto;
     }
     h2 span {
         display: inline;
