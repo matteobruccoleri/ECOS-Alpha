@@ -214,7 +214,7 @@ function adjustProgressBar() {
   }
 }
 
-document.addEventListener("scroll", function () {
+/* document.addEventListener("scroll", function () {
   const phases = document.querySelectorAll(".parcours_phase");
   const progressFill = document.querySelector(".progress_fill");
   const progressBar = document.querySelector(".parcours_progress_bar");
@@ -280,7 +280,7 @@ phases.forEach(function (phase) {
     attributes: true,
     attributeFilter: ["class"],
   });
-});
+}); */
 
 //Popup
 document.addEventListener("DOMContentLoaded", function () {
