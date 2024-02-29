@@ -8,7 +8,6 @@ html {
 body {
     background-color: #F7FBFF;
     font-family: 'Inter', sans-serif;
-    padding-bottom: env(safe-area-inset-bottom);
 }
 a {
     text-decoration: none;
@@ -200,9 +199,9 @@ header .ecos-alpha {
     align-items: flex-start;
     gap: 35px;
 }
-/* .entrainement_text, .entrainement_title, .entrainement_btn  {
+.entrainement_text, .entrainement_title, .entrainement_btn  {
     animation: 1s cubic-bezier(0.14, .38, .19, .99) anim-y both ;
-} */
+}
 .entrainement_text {
     display: flex;
     gap: 8px;
@@ -232,7 +231,7 @@ header .ecos-alpha {
     transform-origin: center;
     transform: translate(-50%, -50%);
 }
-/* .iphone-1 {
+.iphone-1 {
     z-index: 2;
     animation: 1.8s cubic-bezier(0.14, .38, .19, .99) 0.5s anim-iphone-1 both;
     transform-origin: center;
@@ -243,11 +242,11 @@ header .ecos-alpha {
     animation: 1.8s cubic-bezier(0.14, .38, .19, .99) 0.5s anim-iphone-2 both;
     transform-origin: center;
     transform: translate(-37.5%, -50%) rotate(0deg) scale(0.8);
-} */
-/* .ellipse-blue {
+}
+.ellipse-blue {
     z-index: 0;
     animation: 1.8s cubic-bezier(0.14, .38, .19, .99) 0.5s anim-ellipse-blue both;   
-    background: linear-gradient(88deg, #0A68CF 3.16%, #469EFF 97.03%);Ò
+    background: linear-gradient(88deg, #0A68CF 3.16%, #469EFF 97.03%);
     opacity: 0.4;
     height: 480px;
     width: 480px;
@@ -255,7 +254,7 @@ header .ecos-alpha {
     transform: translate(-50%, -50%) rotate(0deg);
     top: 0%;
     left: 0%;
-} */
+}
 
 /***** Conception *****/
 #conception {
