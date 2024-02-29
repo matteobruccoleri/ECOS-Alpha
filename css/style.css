@@ -607,6 +607,16 @@ header .ecos-alpha {
 .notation_container.anim-y-both {
     animation-delay: 1.2s;
 }
+.mask_notation {
+    position: absolute;
+    transform: translate(-50%, 0%);
+    height: 40%;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    z-index: 1;
+}
 .correction_container, .notation_container {
     padding: 25px;
     width: 300px;
@@ -643,6 +653,7 @@ header .ecos-alpha {
     font-weight: 500;
     right: 16px;
     bottom: 18px;
+    z-index: 10;
 }
 .correction_btn:hover, .notation_btn:hover {
     background: #323232;
@@ -1994,6 +2005,9 @@ footer nav .link{
 }
 
 @media screen and (max-width: 425px) {
+    h5 {
+        font-size: 16px;
+    }
     li {
         font-size: 16px;
     }
