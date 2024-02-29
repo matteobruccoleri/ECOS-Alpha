@@ -173,14 +173,15 @@ closeModal.addEventListener("click", () => {
 
 // Écouter les événements sur correction_btn
 const correctionBtn = document.querySelector(".correction_btn");
-const popupCorrectionWrapper = document.querySelector(".popup_correction_wrapper");
+const popupCorrectionWrapper = document.querySelector(
+  ".popup_correction_wrapper"
+);
 const popupCorrection = document.querySelector(".popup_correction");
 
-correctionBtn.addEventListener('click', () => {
+correctionBtn.addEventListener("click", () => {
   popupCorrectionWrapper.style.visibility = "visible";
   popupCorrectionWrapper.classList.add("display");
   popupCorrection.classList.add("anim_download");
-
 });
 
 // Écouter les événements sur notation_btn
@@ -188,11 +189,10 @@ const notationBtn = document.querySelector(".notation_btn");
 const popupNotationWrapper = document.querySelector(".popup_notation_wrapper");
 const popupNotation = document.querySelector(".popup_notation");
 
-notationBtn.addEventListener('click', () => {
+notationBtn.addEventListener("click", () => {
   popupNotationWrapper.style.visibility = "visible";
   popupNotationWrapper.classList.add("display");
   popupNotation.classList.add("anim_download");
-
 });
 
 // Écouter les événements sur popup_correction_close
@@ -217,19 +217,25 @@ popupNotationClose.addEventListener("click", () => {
 document.addEventListener("mousedown", (event) => {
   // Si le clic n'a pas été effectué sur modal_download et effectué sur modal_download_wrapper
   if (
-    !event.target.closest(".modal_download") && event.target.closest(".modal_download_wrapper")) {
+    !event.target.closest(".modal_download") &&
+    event.target.closest(".modal_download_wrapper")
+  ) {
     modal.classList.remove("anim_download");
     modalDownloadWrapper.classList.remove("display");
     modalDownloadWrapper.style.visibility = "hidden";
   }
   if (
-    !event.target.closest(".popup_correction") && event.target.closest(".popup_correction_wrapper")) {
+    !event.target.closest(".popup_correction") &&
+    event.target.closest(".popup_correction_wrapper")
+  ) {
     popupCorrection.classList.remove("anim_download");
     popupCorrectionWrapper.classList.remove("display");
     popupCorrectionWrapper.style.visibility = "hidden";
   }
   if (
-    !event.target.closest(".popup_notation") && event.target.closest(".popup_notation_wrapper")) {
+    !event.target.closest(".popup_notation") &&
+    event.target.closest(".popup_notation_wrapper")
+  ) {
     popupNotation.classList.remove("anim_download");
     popupNotationWrapper.classList.remove("display");
     popupNotationWrapper.style.visibility = "hidden";
@@ -638,18 +644,6 @@ document.addEventListener("DOMContentLoaded", function () {
   adjustBehaviorBasedOnScreenSize();
 });
 window.addEventListener("resize", adjustBehaviorBasedOnScreenSize);
-
-//phase 3 inactive en desktop
-function toggleDivVisibility() {
-  const div = document.getElementById("phase_3_container_mobile");
-  if (window.innerWidth < 1024) {
-    div.style.display = "flex";
-  } else {
-    div.style.display = "none";
-  }
-}
-window.addEventListener("resize", toggleDivVisibility);
-toggleDivVisibility();
 
 //click sur medecin au chargement
 document.addEventListener("DOMContentLoaded", function () {
