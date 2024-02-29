@@ -141,10 +141,19 @@ window.addEventListener("scroll", () => {
 });
 
 const allBtnDownload = document.querySelectorAll(".btn_blue");
+const parcoursBtnDownload = document.querySelectorAll(".parcours_phase_btn");
 const modalDownloadAppli = document.querySelector(".modal_download_wrapper");
 const modal = document.querySelector(".modal_download");
 
 allBtnDownload.forEach((btnDownload) => {
+  btnDownload.addEventListener("click", () => {
+    modalDownloadAppli.style.visibility = "visible";
+    modalDownloadAppli.classList.add("display");
+    modal.classList.add("anim_download");
+  });
+});
+
+parcoursBtnDownload.forEach((btnDownload) => {
   btnDownload.addEventListener("click", () => {
     modalDownloadAppli.style.visibility = "visible";
     modalDownloadAppli.classList.add("display");
