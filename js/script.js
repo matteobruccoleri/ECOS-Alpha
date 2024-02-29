@@ -492,8 +492,6 @@ function changeTab() {
       adjustProgressBar();
     });
   });
-  document.querySelector(".parcours_nav a[data-role='medecin']").click();
-
   if (links.length > 0) {
     links[0].dispatchEvent(new Event("click"));
   }
@@ -577,8 +575,6 @@ function changeTabMobile() {
       }
     });
   });
-  document.querySelector(".parcours_nav a[data-role='medecin']").click();
-
   if (links.length > 0) {
     links[0].dispatchEvent(new Event("click"));
   }
