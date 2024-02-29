@@ -415,7 +415,7 @@ document.getElementById("btn_phase_3").addEventListener("click", function () {
 });
 
 //Onglets
-/* function changeTab() {
+function changeTab() {
   const links = document.querySelectorAll(".parcours_nav a");
   const navBackground = document.querySelector(".nav-background");
   const phase_1 = document.getElementById("phase_1");
@@ -594,7 +594,7 @@ function adjustBehaviorBasedOnScreenSize() {
 document.addEventListener("DOMContentLoaded", function () {
   adjustBehaviorBasedOnScreenSize();
 });
-window.addEventListener("resize", adjustBehaviorBasedOnScreenSize); */
+window.addEventListener("resize", adjustBehaviorBasedOnScreenSize);
 
 //phase 3 inactive en desktop
 function toggleDivVisibility() {
