@@ -545,11 +545,6 @@ function changeTab() {
       adjustProgressBar();
     });
   });
-  document.querySelector(".parcours_nav a[data-role='medecin']").click();
-
-  if (links.length > 0) {
-    links[0].dispatchEvent(new Event("click"));
-  }
 }
 
 //Onglets responsive
@@ -630,11 +625,6 @@ function changeTabMobile() {
       }
     });
   });
-  document.querySelector(".parcours_nav a[data-role='medecin']").click();
-
-  if (links.length > 0) {
-    links[0].dispatchEvent(new Event("click"));
-  }
 }
 function adjustBehaviorBasedOnScreenSize() {
   if (window.innerWidth < 1024) {
@@ -660,3 +650,11 @@ function toggleDivVisibility() {
 }
 window.addEventListener("resize", toggleDivVisibility);
 toggleDivVisibility();
+
+//click sur medecin au chargement
+document.addEventListener("DOMContentLoaded", function () {
+  const medecinTab = document.querySelector('[data-role="medecin"]');
+  if (medecinTab) {
+    medecinTab.click();
+  }
+});
