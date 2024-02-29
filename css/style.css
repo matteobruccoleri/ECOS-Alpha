@@ -1720,8 +1720,9 @@ footer nav .link{
     }
     h1 span {
         display: inline;
+        padding-left: 6px;
     }
-    h2 {
+    h1, h2 {
         font-size: 24px;
     }
     h2 span, h3 span {
@@ -2005,6 +2006,10 @@ footer nav .link{
 }
 
 @media screen and (max-width: 425px) {
+    h1 span {
+        display: inline-block;
+        padding-left: 0;
+    }
     h5 {
         font-size: 16px;
     }
