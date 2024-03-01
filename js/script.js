@@ -513,13 +513,13 @@ function changeTab() {
         case "medecin":
           phase_1.textContent = "Préparation des joueurs";
           texte_1.textContent =
-            "Préparation des étudiants. Le patient prend connaissance de sa fiche, et l'évaluateur de sa grille. Lorsqu'ils sont prêts, le médecin lance le chronomètre pour lire les consignes";
+            "Les étudiants se préparent. L'acteur prend connaissance de son rôle, et l’évaluateur de la grille de correction et des annexes. Lorsqu'ils sont prêts, le médecin lance le chronomètre pour lire ses consignes en 1 minute maximum.";
           phase_2.textContent = "Simulation";
           texte_2.textContent =
-            "Lorsqu'il est prêt, le médecin lance un nouveau chronomètre pour lancer la partie";
+            "Lorsque tous les joueurs sont prêts, le médecin lance un nouveau chronomètre pour débuter la simulation et l’évaluateur note sa prestation dans une limite de 8 minutes maximum (7 minutes + temps de préparation non consommé).";
           phase_3.textContent = "Résultat";
           texte_3.textContent =
-            "L'évaluateur termine son évaluation, même après 8 minutes. Le médecin a ensuite accès à la grille et la correction détaillée";
+            "L'évaluateur termine son évaluation, même après 8 minutes. Il peut ensuite la transmettre à l'étudiant qui a accès à sa note, sa grille d'évaluation et une correction détaillée du cas.";
           phase_3_container.style.display = "flex";
           phase_1_numero.textContent = "Phase 1/3";
           phase_2_numero.textContent = "Phase 2/3";

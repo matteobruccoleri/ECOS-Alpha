@@ -242,12 +242,14 @@ header .ecos-alpha {
     animation: 1.8s cubic-bezier(0.14, .38, .19, .99) 0.5s anim-iphone-1 both;
     transform-origin: center;
     transform: translate(-62.5%, -50%) rotate(0deg) scale(0.8);
+    height: 412px;
 }
 .iphone-2 {
     z-index: 1;
     animation: 1.8s cubic-bezier(0.14, .38, .19, .99) 0.5s anim-iphone-2 both;
     transform-origin: center;
     transform: translate(-37.5%, -50%) rotate(0deg) scale(0.8);
+    height: 412px;
 }
 .ellipse-blue {
     z-index: 0;
@@ -522,6 +524,7 @@ header .ecos-alpha {
     left: 0%;
     transform-origin: center;
     transform: translate(0%, 50%);
+    height: 504px;
 }
 .iphone-3-b, .iphone-3-d {
     position: absolute;
@@ -529,6 +532,7 @@ header .ecos-alpha {
     left: 100%;
     transform-origin: center;
     transform: translate(-100%, -150%); 
+    height: 504px;
 }
 
 /*********************/
@@ -801,7 +805,7 @@ header .ecos-alpha {
     line-height: 85%;
 }
 .outil_content_2 .tarif p:last-of-type {
-    font-size: 12px;
+    font-size: 14px;
 }
 .outil_content_2 .premium {
     display: flex;
@@ -1046,7 +1050,7 @@ header .ecos-alpha {
     display: flex;
     flex-direction: column;
     gap: 600px;
-    width: 65%;
+    width: 60%;
 }
 .parcours_phase {
     display: flex;
@@ -1094,7 +1098,7 @@ header .ecos-alpha {
     width: max-content;
 }
 .parcours_fixed_img {
-    width: 35%;
+    width: 40%;
     position: relative;
     margin-bottom: 50px;
 }
@@ -1447,10 +1451,27 @@ footer nav .link{
 
 /**************************/
 /***** Media queries *****/
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1920px) {
     .parcours_img_wrapper {
-        width: 350px;
-        height: 350px;
+        width: 500px;
+        height: 500px;
+    }
+}
+@media screen and (min-width: 1660px) and (max-width: 1920px) {
+    .parcours_img_wrapper {
+        width: 450px;
+        height: 450px;
+    }
+}
+@media screen and (min-width: 1440px) and (max-width: 1660px) {
+    .parcours_img_wrapper {
+        width: 400px;
+        height: 400px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .outil_content_2 .tarif p:last-of-type {
+        font-size: 16px;
     }
 }
 @media screen and (max-width: 1660px) {
@@ -1463,8 +1484,6 @@ footer nav .link{
     h3 {
         font-size: 24px;
     }
-
-
 }
 @media screen and (max-width: 1440px) {
     h1, h2 {
@@ -1487,8 +1506,13 @@ footer nav .link{
     .entrainement_content_2 .iphone-1, .entrainement_content_2 .iphone-2{
         height: 370px;
     }
+    /***** parcours *****/
+    .parcours_img_wrapper {
+        width: 400px;
+        height: 400px;
+    }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1274px) {
     h1, h2 {
         font-size: 28px;
     }
@@ -1544,14 +1568,13 @@ footer nav .link{
         width: 65%;
         height: 65%;
     }
+    /***** parcours *****/
+    .parcours_img_wrapper {
+        width: 350px;
+        height: 350px;
+    }
 }
 @media screen and (max-width: 1100px) {
-    .parcours_progress {
-        width: 60%;
-    }
-    .parcours_fixed_img {
-        width: 40%;
-    }
     .parcours_phase_title {
         align-items: flex-start;
         width: 110px;
@@ -1672,7 +1695,10 @@ footer nav .link{
     .about_content ul {
         padding-left: 0;
     }
-    
+    /***** popup *****/
+    .popup_img {
+        height: 253px;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -2095,5 +2121,9 @@ footer nav .link{
     }
     .tarif_span {
         display: none;
+    }
+    /***** popup *****/
+    .popup_img {
+        height: 250px;
     }
 }
